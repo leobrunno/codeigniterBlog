@@ -9,6 +9,10 @@
                 <h3>
                     <?= $postagens['conteudo']; ?>
                 </h3>
+                <h3>
+                    <?=anchor('home/editar/'.$postagens['id'],'Editar')."</br>"?>
+                    <?=anchor('home/excluir/'.$postagens['id'],'Excluir')?>
+                </h3>
             </div>
     </div>
 </div>
