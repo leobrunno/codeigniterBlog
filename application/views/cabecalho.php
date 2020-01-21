@@ -1,6 +1,6 @@
 <html>
     <div id = "cabecalho">
-    <link href = "http://localhost/codeigniter/assets/css/estilo.css" rel = "stylesheet"/>
+    <link href = "http://localhost/codeigniterBlog/assets/css/estilo.css" rel = "stylesheet"/>
         <h2>Blog do fulano de tal</h2>
         
         <?php if ($this->session->flashdata('error') == TRUE): ?>

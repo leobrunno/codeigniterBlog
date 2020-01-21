@@ -1,5 +1,5 @@
 <div id = "menu_de_post">
-<link href = "http://localhost/codeigniter/assets/css/estilo.css" rel = "stylesheet"/>
+<link href = "http://localhost/codeigniterBlog/assets/css/estilo.css" rel = "stylesheet"/>
 <h2> Menu de posts </h2>
 <ul>
     <?= anchor('home/novo', 'Nova postagem');?>

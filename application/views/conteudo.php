@@ -1,5 +1,5 @@
 <div id = "conteudo">
-<link href = "http://localhost/codeigniter/assets/css/estilo.css" rel = "stylesheet"/>
+<link href = "http://localhost/codeigniterBlog/assets/css/estilo.css" rel = "stylesheet"/>
     <h2> Conteudo das postagens </h2>
     <div id = 'grid-home'>
         <?php foreach($postagens as $posts):?>
