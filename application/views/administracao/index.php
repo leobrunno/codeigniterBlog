@@ -1,36 +1,37 @@
-<?= form_open(base_url().'usuario/autenticar');?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Custom styles for this template -->
+     <link href="https://getbootstrap.com/docs/3.3/examples/signin/signin.css" rel="stylesheet">
+</head>
 
-<?= form_fieldset('Login');?>
+<body>
+    <div class= "container">
+        <form action="<?=base_url()?>usuario/autenticar" class="form-signin" method = "post">
 
-<?= form_label("Usuario", "usuario");?>
-<?= form_input(array(
-    "name" => "usuario",
-    "id" => "usuario",
-));?>
-<?= form_label("Senha", "senha");?>
-<?= form_password(array(
-    "name" => "senha",
-    "id" => "senha",
-));?>
-<?= form_button(array(
-    "class" => "btn_submit",
-    "type" => "submit",
-    "content" => "Login"
-));?>
+            <h2 class="form-signin-heading">Bem vindo ao Blog</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" name = "usuario" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Password" required>
 
-<?php if ($this->session->flashdata('error') == TRUE): ?>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            
+            <?= anchor('usuario/cadastro', 'Cadastre-se'); ?>
+            
+        </form>
+    </div>
+
+    <?php if ($this->session->flashdata('error') == TRUE): ?>
             <h2><?=$this->session->flashdata('error')?></h2>
         <?php endif; ?>
         
         <?php if ($this->session->flashdata('success') == TRUE): ?>
             <h2><?=$this->session->flashdata('success')?></h2>
         <?php endif; ?>
-
-<?= anchor('usuario/cadastro', 'Cadastre-se'); ?>
-
-<?= form_fieldset_close()?>
-<?= form_close();?>
-
-
-
-
+</body>
+</html>
